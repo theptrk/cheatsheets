@@ -2,6 +2,8 @@
 
 /**
  * This adds a column on the SOURCE model for TARGET id in a 1:M relationship
+ * An example is a 1:M relationship between "Task" and "User" where a "Task" 
+ * belongs to a single "User" 
  */
 
 // This is the name of your "source" model that is the (1) in the relationship
