@@ -21,7 +21,9 @@ const TARGET_MODEL_NAME = 'User';
 // Get the real table name by initializing a sequelize instance
 // By default we will use the field name (TARGET model + "Id")
 
-const SOURCE_TABLE_NAME = require(__dirname + '/../models')[SOURCE_MODEL_NAME].getTableName()
+const m = require(__dirname + '/../models');
+const SOURCE_TABLE_NAME = m[SOURCE_MODEL_NAME].getTableName()
+const TARGET_TABLE_NAME = m[TARGET_MODEL_NAME].getTableName()
 const TARGET_FIELD_NAME = TARGET_MODEL_NAME + 'Id'
 
 module.exports = {
@@ -33,7 +35,7 @@ module.exports = {
       {
         type: DataTypes.INTEGER,
         references: { 
-          model: TARGET_MODEL_NAME, 
+          model: TARGET_TABLE_NAME, 
           key: "id" 
         },
         onDelete: 'cascade'
