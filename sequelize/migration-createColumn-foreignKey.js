@@ -38,7 +38,8 @@ module.exports = {
           model: TARGET_TABLE_NAME, 
           key: "id" 
         },
-        onDelete: 'cascade'
+        onDelete: 'cascade',
+        allowNull: false
       }
     );
     done();
