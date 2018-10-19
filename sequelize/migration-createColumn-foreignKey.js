@@ -1,7 +1,5 @@
 'use strict'
 
-const path = require('path')
-
 /**
  * This adds a column on the SOURCE model for TARGET id in a 1:M relationship
  *
